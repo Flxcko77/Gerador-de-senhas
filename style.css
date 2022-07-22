@@ -16,7 +16,8 @@ html{
 body{
     height: 100vh;
     width: 100%;
-    background: blueviolet;
+    background: rgb(244,0,0);
+    background: linear-gradient(347deg, rgba(244,0,0,1) 7%, rgba(40,40,59,1) 75%, rgba(22,26,29,1) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +80,7 @@ input:hover{
     color: white;
     background: black;
     border: none;
+    filter: drop-shadow(2px 4px 8px red);
 }
 
 #copyright{
@@ -87,6 +89,8 @@ input:hover{
     margin-top: 20px;
     opacity: 40%;
     font-size: 2.5rem;
+    border-bottom: 2px solid red;
+    filter: drop-shadow(2px 4px 8px red);
 }
 
 .socialmidia{
@@ -102,12 +106,17 @@ ul {
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid red;
+   
 }
 
 li{
     list-style: none;
     padding: 7px;
+    transition: 0.3ms;
+}
+
+li:hover{
+    border-bottom: 4px solid black
 }
 
 img:hover {
@@ -122,5 +131,55 @@ img{
     height: 4rem;
     width: 4rem;
     opacity: 50%;
+    transition: 1.2s;
 }
 
+@media(min-width:768px){
+    html{
+        font-size: 75%;
+    }
+    main{
+        justify-content: center;
+    }
+}
+@media(min-width:1024px){
+    html{
+        font-size: 70%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #resultado{
+        width: 80%;
+        height: 30vh;
+    }
+    h1{
+        margin: 0;
+    }
+}
+@media(min-width: 1440px){
+    html{
+        font-size: 120%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #resultado{
+        width: 80%;
+        height: 30vh;
+    }
+    input{
+        width: 150px;
+        transition: 1.2s;
+    }
+    input:hover{
+        width: 250px;
+    }
+    #copyright{
+        margin-top: 70px;
+    }
+}
