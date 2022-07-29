@@ -13,10 +13,15 @@ function Copiar(){
     let SenhaGerada = window.document.getElementById('Resultado');
     let SenhaCopiada = SenhaGerada.innerText;
     Copiado.value = `COPIADO!`;
+    alert(`Senha copiada ${SenhaCopiada}`);
     
+    SenhaCopiada.select();
+    document.execCommand('copy');
+
 }
 
 function Sair(){
     let Copiar = window.document.getElementById('Copiar');
     Copiar.value = `COPIAR`;
+    
 }
