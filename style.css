@@ -84,6 +84,16 @@ input:hover{
     filter: drop-shadow(2px 4px 8px red);
 }
 
+#Resultado{
+    width: 400px;
+    text-align: center;
+    font-family: Robota;
+}
+
+#Resultado::placeholder{
+    color: rgb(60, 53, 66);
+}
+
 #copyright{
     font-family: Robota;
     color: whitesmoke;
